@@ -1,25 +1,20 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Header from './components/header/Header';
-import Home from './pages/home/home';
-import MovieList from './components/movieList/movieList';
-import Movie from './pages/movieDetail/movie';
+// App.js
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import Home from './components/Home';
+import CategoryPage from './pages/CategoryPage';
+import UserProfilePage from './pages/UserProfilePage';
 
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-        <Router>
-          <Header />
-            <Routes>
-                <Route index element={<Home  />}></Route>
-                <Route path="movie/:id" element={<Movie />}></Route>
-                <Route path="movies/:type" element={<MovieList />}></Route>
-                <Route path="/*" element={<h1>Error Page</h1>}></Route>
-            </Routes>
-        </Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/category/:id" component={CategoryPage} />
+        <Route path="/user/profile" component={UserProfilePage} />
+      </Switch>
     </div>
   );
-}
+};
 
 export default App;
