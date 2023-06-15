@@ -1,14 +1,15 @@
-var a = 100;
-var b = 2;
-var c = 10;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import rootReducer from './reducers';
+import App from './App';
 
-console.log(a+b+c);
+const store = createStore(rootReducer);
 
-let a = 100;
-let b = 2;
-let c = 10;
-
-console.log(a+b+c);
-
-//const b=3;
-//console.log(a+b+c);node .
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);

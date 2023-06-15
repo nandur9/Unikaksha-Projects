@@ -1,26 +1,26 @@
-import { Routes,Route } from 'react-router-dom';
-import './App.css';
+import React from 'react';
+import { connect } from 'react-redux';
+import { increment, decrement } from './actions';
 
-
-import Navbar from './components/Navbar';
-import DashBord from './Pagess/DashBord';
-// eslint-disable-next-line no-unused-vars
-import SearchPage from './Pagess/SearchPage';
-import Show from './Pagess/Show';
-
-
-function App() {
+const App = ({ counter, increment, decrement }) => {
   return (
-    <div className="App">
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<DashBord/>}/>
-        <Route path="/search" element={<SearchPage/>}/>
-        <Route path="/show" element={<Show/>}/>
-      </Routes>
-
+    <div>
+      <h2>Counter: {counter}</h2>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
     </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    counter: state.counter,
+  };
+};
+
+const mapDispatchToProps = {
+  increment,
+  decrement,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
