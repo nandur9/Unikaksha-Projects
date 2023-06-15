@@ -1,0 +1,46 @@
+
+		.container {
+			max-width: 800px;
+		}
+		body {
+			background-color: #e21515;
+		}
+		/* Style the Resume link to stand out */
+		.navbar-nav .nav-item:nth-child(4) .nav-link {
+			color: #fff;
+			background-color: #007bff;
+			border-color: #0aa43b;
+			padding: .5rem 1rem;
+			border-radius: .25rem;
+		}
+		.navbar-nav .nav-item:nth-child(4) .nav-link:hover {
+			background-color: #0069d9;
+			border-color: #0062cc;
+		}
+		.navbar-default {
+			align-items: stretch;
+			font-size: 20px;
+			font-weight: lighter;
+			background-color: #006b96;
+			padding: 1px;
+			border: 50px;
+			border-radius: 10px;
+		}
+		#about {
+			text-align: center;
+			padding: 40px;
+		}
+		#about img {
+			width: 200px;
+			border-radius: 100%;
+		}
+		#about h1 {
+			margin: 25px;
+		}
+		section {
+			padding-bottom: 40px;
+		}
+		.card .card-header {
+			cursor: pointer;
+		}
+	
