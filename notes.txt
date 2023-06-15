@@ -1,0 +1,26 @@
+Microsoft Windows [Version 10.0.19045.2965]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\DELL>node -v
+v20.2.0
+
+C:\Users\DELL>npm -v
+9.6.6
+
+C:\Users\DELL>node
+Welcome to Node.js v20.2.0.
+Type ".help" for more information.
+> console.log("Narendra Reddy")
+Narendra Reddy
+undefined
+> var a = 100;
+undefined
+> console.log(a);
+100
+undefined
+> var b = 200;
+undefined
+> console.log(a+b);
+300
+undefined
+>

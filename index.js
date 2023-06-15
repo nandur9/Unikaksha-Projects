@@ -1,13 +1,14 @@
-// index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
-import './index.css';
+var a = 100;
+var b = 2;
+var c = 10;
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById('root')
-);
+console.log(a+b+c);
+
+let a = 100;
+let b = 2;
+let c = 10;
+
+console.log(a+b+c);
+
+//const b=3;
+//console.log(a+b+c);node .
